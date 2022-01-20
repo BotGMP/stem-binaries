@@ -4,8 +4,8 @@ To perform the artififact evaluation please download the stem tool from [release
 
 1) Download and execute the benchmark script with
 ```
-wget ... && stem-binaries-install.sh
-source ...
+wget https://raw.githubusercontent.com/anmaped/stem-binaries/v1.0.x/scripts/stem-binaries-install.sh && ./stem-binaries-install.sh
+export PATH=~/stem-binaries:$PATH
 ```
 
 The script will get the proper bundle release (Linux or MacOS).
@@ -18,7 +18,7 @@ Now, you can try this [guide](guide.md) or proceed to the next step.
 
 3) Run the `benchmark-artifact.sh` with the command
 ```
-./benchmark-artifact.sh
+~/stem-binaries/scripts/benchmark-artifact.sh
 ```
 
 4) Check the results in the folder `results`.
