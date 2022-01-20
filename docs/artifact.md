@@ -4,7 +4,7 @@ To perform the artififact evaluation please download the stem tool from [release
 
 1) Download and execute the benchmark script with
 ```
-wget https://raw.githubusercontent.com/anmaped/stem-binaries/v1.0.x/scripts/stem-binaries-install.sh && ./stem-binaries-install.sh
+wget https://raw.githubusercontent.com/anmaped/stem-binaries/master/scripts/stem-binaries-install.sh && bash stem-binaries-install.sh
 export PATH=~/stem-binaries:$PATH
 ```
 
