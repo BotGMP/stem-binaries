@@ -14,7 +14,7 @@ python3 -m venv stem-env
 source stem-env/bin/activate
 python3 -m pip install --upgrade pip
 
-# install dependicies inside the virtual environment
+# install dependencies inside the virtual environment
 pip install z3-solver sexpr sexpdata
 ```
 
@@ -24,7 +24,7 @@ We demonstrate how to use our tool to monitor a simple spatio-temporal property 
 
 The safety property describes whether two cars (C1 and C2) do not collide.
 
-The [input file](properties/no-colision.sprop) describing our property is a `.sprop` file (stem property file extension) with the content
+The [input file](../properties/no-colision.sprop) describing our property is a `.sprop` file (stem property file extension) with the content
 ```
 (property "ltlxms:name"
     (always (not (overlap (prop "C1") (prop "C2"))))
@@ -49,9 +49,9 @@ To simulate the monitoring model and the trace satisfiability type
 ```
 
 The flag `-s` instructs the tool to simulate the monitoring model `-m` and the trace `-t`.
-We also include flags `-u` to use the unroll method (`-l` sets the incremental method), and `-n` sets a map between the spatial variables (from the monitoring model) and the elements identifiers (e.g., `ID`) of the trace. Note that without this mapping, a spatial object cannot map to variables or spatial propositions.
+We also include flags `-u` to use the unroll method (`-l` sets the incremental evaluation), and `-n` sets a map between the spatial variables (from the monitoring model) and the identifiers of elements (e.g., `ID`) of the trace. Without this identifier, a spatial object cannot map to variables or spatial propositions.
 
-The trace example file is available in [no-colision-c1-c2-trace.json](traces/no-colision-c1-c2-trace.json) and the footprint of this trace is illustrated in the figure below.
+The trace example file is available in [no-colision-c1-c2-trace.json](../traces/no-colision-c1-c2-trace.json), and the footprint of this trace is available in the figure below.
 
 ![image](img/test_empirical_trace_plot.png)
 
@@ -64,4 +64,4 @@ Checking satisfiability of the model... sat
 (Time, Memory) = (0.014, 2.72)
 ```
 
-The number of frames means the size of the trace and runtime the time that the monitor generation process took excluding the time of the solver. Memmory (in megabytes) and time (in seconds) means the time and memory the solver spent.
+The number of frames means the size of the trace, and runtime is the time the monitor generation process took without the execution time of the solver. Memory (in megabytes) and time (in seconds) means the time and memory the solver spent.
