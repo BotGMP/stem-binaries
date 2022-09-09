@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION=1.0.1
+VERSION=1.0.2
 
 install()
 {
@@ -30,7 +30,7 @@ install()
     # check if file exists
     rm -f ${BUNDLE}
 
-    wget "https://github.com/anmaped/stem-binaries/releases/download/v1.0.x/${BUNDLE}"
+    wget "https://github.com/anmaped/stem-binaries/releases/download/v1.0.2/${BUNDLE}"
 
     echo "stem will be installed in home directory ('~/stem-binaries') ..."
     mkdir -p ~/stem-binaries
